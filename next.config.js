@@ -9,7 +9,7 @@ const nextConfig = {
       //config.cache=false
       config.plugins.push(
         new NextFederationPlugin({
-          name: 'EnergyServiceReact',
+          name: 'checkout',
           remotes: {
             // home: `home@http://localhost:3001/_next/static/chunks/remoteEntry.js`,
             // shop: 'shop@http://localhost:3002/_next/static/chunks/remoteEntry.js',
@@ -17,7 +17,7 @@ const nextConfig = {
           filename: 'static/chunks/remoteEntry.js',
           exposes: {
             './title': './components/exposedTitle.js',
-            './home': './pages/index',
+            './checkout': './pages/index',
           },
           shared: {},
           extraOptions: {}
