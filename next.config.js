@@ -17,7 +17,7 @@ const nextConfig = {
           filename: 'static/chunks/remoteEntry.js',
           exposes: {
             './title': './components/exposedTitle.js',
-            './energyservicereact': './pages/index',
+            './home': './pages/index',
           },
           shared: {},
           extraOptions: {}
