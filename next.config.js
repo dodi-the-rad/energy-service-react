@@ -9,7 +9,7 @@ const nextConfig = {
       //config.cache=false
       config.plugins.push(
         new NextFederationPlugin({
-          name: 'checkout',
+          name: 'EnergyServiceReact',
           remotes: {
             // home: `home@http://localhost:3001/_next/static/chunks/remoteEntry.js`,
             // shop: 'shop@http://localhost:3002/_next/static/chunks/remoteEntry.js',
