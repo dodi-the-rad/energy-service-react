@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-const ExportredTitle = () => {
+const ExposedTitle = () => {
 
   useEffect(() => {
     console.log('HOOKS WORKS');
@@ -17,4 +17,4 @@ const ExportredTitle = () => {
   );
 };
 
-export default ExportredTitle;
+export default ExposedTitle;
