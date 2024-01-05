@@ -1,11 +1,9 @@
 import React, { useEffect } from 'react';
-
-const ExposedTitle = () => {
-
+const ExportredTitle = () => {
+  console.log('---------loading remote component---------');
   useEffect(() => {
     console.log('HOOKS WORKS');
   }, []);
-
   return (
     <div className="hero">
       <h1 className="title">
@@ -17,4 +15,4 @@ const ExposedTitle = () => {
   );
 };
 
-export default ExposedTitle;
+export default ExportredTitle;

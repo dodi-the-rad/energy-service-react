@@ -1,8 +1,6 @@
-/** @type {import('next').NextConfig} */
 const NextFederationPlugin = require('@module-federation/nextjs-mf');
 
-const nextConfig = {
-  reactStrictMode: true,
+module.exports = {
   webpack(config, options) {
     const { webpack } = options;
     if (!options.isServer) {
@@ -11,23 +9,22 @@ const nextConfig = {
         new NextFederationPlugin({
           name: 'checkout',
           remotes: {
-            dashboard: `dashboard@http://localhost:3000/_next/static/chunks/remoteEntry.js`,
+            home: `home@https://energy-dashboard-ashy.vercel.app/_next/static/chunks/remoteEntry.js`,
             // shop: 'shop@http://localhost:3002/_next/static/chunks/remoteEntry.js',
           },
           filename: 'static/chunks/remoteEntry.js',
           exposes: {
             './title': './components/exposedTitle.js',
-            './home': './pages/index',
             './checkout': './pages/checkout',
+            './pages-map': './pages-map.js',
           },
           shared: {},
-          extraOptions: {}
+          extraOptions: {
+          }
         }),
       );
     }
 
     return config;
   },
-}
-
-module.exports = nextConfig;
+};
